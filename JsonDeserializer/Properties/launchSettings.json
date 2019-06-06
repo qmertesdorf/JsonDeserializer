@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "JsonDeserializer": {
-      "commandName": "Project",
-      "commandLineArgs": "-f C:\\Users\\Quintttt\\source\\repos\\JsonDeserializer\\JsonDeserializer\\testdata.json"
-    }
-  }
-}
