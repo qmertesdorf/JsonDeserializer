@@ -1,5 +1,7 @@
 ﻿using System;
-
+using System.IO;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace JsonDeserializer
 {
@@ -10,9 +12,14 @@ namespace JsonDeserializer
             string argument = args[0];
             string filepath = args[1];
             if (argument == "-f")
-            { 
-                Console.WriteLine("Argument is: " + argument);
-                Console.WriteLine("Filepath is: " + filepath);
+            {
+                JObject parsedJSON = JObject.Parse(File.ReadAllText(@filepath));
+
+                JArray jsonArray = (JArray)parsedJSON["items"];
+                foreach (JToken item in jsonArray)
+                {
+                    Console.WriteLine(item["name"]);
+                }
             }
         }
     }
