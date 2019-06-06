@@ -2,7 +2,7 @@
   "profiles": {
     "JsonDeserializer": {
       "commandName": "Project",
-      "commandLineArgs": "-f C:\\Users\\Quint\\source\\repos\\JsonDeserializer\\JsonDeserializer\\testdata.json"
+      "commandLineArgs": "-f C:\\Users\\Quintttt\\source\\repos\\JsonDeserializer\\JsonDeserializer\\testdata.json"
     }
   }
 }
