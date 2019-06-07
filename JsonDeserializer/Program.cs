@@ -42,13 +42,12 @@ namespace JsonDeserializer
         }
         static private string DetermineFilePath(IConfiguration config, string[] args)
         {
-            if (config["filepath"] != null && File.Exists(config["filepath"]))
-            {
-                return config["filepath"];
-            }
-            else if (args.Length == 2 && File.Exists(args[1]) && args[0] == "-f")
+            if (args.Length == 2 && File.Exists(args[1]) && args[0] == "-f")
             {
                 return args[1];
+            } else if (config["filepath"] != null && File.Exists(config["filepath"]))
+            {
+                return config["filepath"];
             }
             else
             {
