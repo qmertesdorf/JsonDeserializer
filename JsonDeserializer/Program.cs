@@ -19,6 +19,7 @@ namespace JsonDeserializer
             {
                 //In the case where user did not pass in the "-f" argument or there is no valid filepath, exit application
                 //User-facing error message would go here
+                Console.WriteLine("Invalid arguments supplied to application.");
                 Environment.Exit(1);
             }
             
